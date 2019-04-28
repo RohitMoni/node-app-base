@@ -1,5 +1,7 @@
 # Simple NodeJS base app
 
+Simple Nodejs Application Server using Express, EJS.
+
 ## Running the app
 
 Can be run with command: node app/main.js
@@ -11,6 +13,5 @@ If you're using VSCode: Can just debug with the pre-made launch option
 2. Documentation
 3. Requirements
 4. Tooling for setup
-5. Simple examples for serving webpages / Routes
-6. Templates
-7. ???
+5. Docker stuff
+6. Nested template example 

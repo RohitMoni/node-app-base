@@ -12,6 +12,7 @@
   "author": "Rohit Moni",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jsonschema": "^1.2.4"
   }
 }
