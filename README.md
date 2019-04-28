@@ -14,4 +14,3 @@ If you're using VSCode: Can just debug with the pre-made launch option
 3. Requirements
 4. Tooling for setup
 5. Docker stuff
-6. Nested template example 
