@@ -2,6 +2,11 @@
 
 Simple Nodejs Application Server using Express, EJS.
 
+## Setting up the app
+
+Needs nodejs and npm installed
+Run npm install
+
 ## Running the app
 
 Can be run with command: node app/main.js
