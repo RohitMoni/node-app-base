@@ -5,6 +5,11 @@ const http = require('http')
 const https = require('https')
 const appController = require('./controllers/appController');
 
+// Read Configuration file
+// Todo: Need to be able to switch between files depending on environment
+const configFile = fs.readFileSync('./config/dev.app.config')
+const config = JSON.parse(configFile)
+
 const app = express()
 
 // set up template engine
@@ -16,13 +21,17 @@ app.use(express.static(path.join(__dirname, '/static')))
 
 appController(app)
 
-const httpsOptions = {
-    key: fs.readFileSync(path.join(__dirname, 'encryption/key.pem'), 'utf-8'),
-    cert: fs.readFileSync(path.join(__dirname, 'encryption/certificate.pem'), 'utf-8'),
+if (config.server.http.enabled) {
+    const httpPort = config.server.http.port
+    http.createServer(app).listen(httpPort, () => console.log(`App serving http on port ${httpPort}!`))
 }
 
-const httpPort = 8080
-const httpsPort = 8443
+if (config.server.https.enabled) {
+    const httpsOptions = {
+        key: fs.readFileSync(config.server.https.key, 'utf-8'),
+        cert: fs.readFileSync(config.server.https.cert, 'utf-8'),
+    }
 
-http.createServer(app).listen(httpPort, () => console.log(`App serving http on port ${httpPort}!`))
-https.createServer(httpsOptions, app).listen(httpsPort, () => console.log(`App serving https on port ${httpsPort}!`))
+    const httpsPort = config.server.https.port
+    https.createServer(httpsOptions, app).listen(httpsPort, () => console.log(`App serving https on port ${httpsPort}!`))
+}
