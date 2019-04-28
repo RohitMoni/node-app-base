@@ -1,0 +1,17 @@
+{
+  "name": "node-app-base",
+  "version": "1.0.0",
+  "description": "Quick starting point for node apps",
+  "main": "app/main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rohit Moni",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

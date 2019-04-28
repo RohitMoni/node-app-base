@@ -1,0 +1,9 @@
+# Logs
+logs/
+*.log
+
+# Builds
+build/
+
+# Dependencies
+node_modules/
