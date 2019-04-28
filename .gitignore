@@ -7,3 +7,6 @@ build/
 
 # Dependencies
 node_modules/
+
+# Certificates and keys (for Https)
+encryption/
