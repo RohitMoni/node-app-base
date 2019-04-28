@@ -7,7 +7,19 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Launch App (Dev)",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "program": "${workspaceFolder}\\app\\main.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch App (Prod)",
+            "env": {
+                "NODE_ENV": "production"
+            },
             "program": "${workspaceFolder}\\app\\main.js"
         }
     ]

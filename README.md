@@ -10,7 +10,10 @@ Run npm install
 ## Running the app
 
 Can be run with command: node app/main.js
-If you're using VSCode: Can just debug with the pre-made launch option
+If you're using VSCode: Can just debug with the pre-made launch option(s)
+
+By default the NODE_ENV is `development`, and `development.app.config` will be the config file loaded.
+You can change this environment variable before running the app to load a different configuration file based on it. 
 
 ## Things to add:
 
@@ -19,5 +22,4 @@ If you're using VSCode: Can just debug with the pre-made launch option
 3. Requirements
 4. Tooling for setup
 5. Docker stuff
-6. Http/2
-7. Environments and tooling to switch between them easily
+6. Better logging
