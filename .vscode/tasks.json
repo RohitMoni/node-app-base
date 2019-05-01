@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build HTTPS Certs (Self-Signed)",
+            "type": "shell",
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-ExecutionPolicy",
+                    "Unrestricted",
+                    "-NoProfile",
+                    "-File",
+                    "${workspaceFolder}/tools/scripts/setup_https/setup_https.ps1",
+                    "-WorkingDir",
+                    "${workspaceFolder}",
+                ]
+            },
+            "linux": {
+                "command": "${workspaceFolder}/tools/scripts/setup_https/setup_https.sh"
+            },
+            "osx": {
+                "command": "${workspaceFolder}/tools/scripts/setup_https/setup_https.sh"
+            },
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
