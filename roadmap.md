@@ -2,8 +2,6 @@
 
 ## In-Progress
 
-* SCSS / SASS support with examples
-
 ## Feature Creep (Unprioritised)
 
 1. Tests

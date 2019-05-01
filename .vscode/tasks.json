@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build HTTPS Certs (Self-Signed)",
+            "label": "Setup HTTPS (Self-Signed)",
             "type": "shell",
             "windows": {
                 "command": "powershell",
@@ -26,6 +26,11 @@
             },
             "problemMatcher": [],
             "group": "build"
+        },
+        {
+            "label": "Setup SCSS Watch / Compile",
+            "command": "${command:liveSass.command.watchMySass}",
+            "problemMatcher": []
         }
     ]
 }

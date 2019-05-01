@@ -1,0 +1,13 @@
+{
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.includeItems": [
+        "${workspaceFolder}/app/scss/"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/app/static/css/"
+        }
+    ]
+}
