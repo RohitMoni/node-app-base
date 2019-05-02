@@ -1,5 +1,7 @@
 echo "test"
 
+mkdir -p encryption
+
 openssl req \
     -nodes \
     -new \
